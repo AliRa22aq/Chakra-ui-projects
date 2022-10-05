@@ -21,8 +21,8 @@ const Home: NextPage = () => {
 
       <Stack direction="row" m="20">
         {
-          projects.map((project) => (
-            <Box cursor="pointer" boxShadow=" 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);">
+          projects.map((project, key) => (
+            <Box cursor="pointer" key={key} boxShadow=" 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);">
               <Link href={project.url}>
                 <Box>
                   <Image src={project.image} width="500px" height="300px" alt={project.name} />
