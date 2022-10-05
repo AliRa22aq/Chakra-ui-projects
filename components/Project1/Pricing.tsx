@@ -18,7 +18,7 @@ const Pricing = () => {
         <Box mx="6">
             <Box maxWidth="994px" m="auto" mt="-140px" borderRadius="4" overflow="hidden" boxShadow="0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)">
                 <Flex direction={["column", "column", "row"]}>
-                    <Box p="60px" color="#171923" bg="#f0eafb">
+                    <Box p="60px" color="#171923" bg="#f0eafb" _hover={{bg:"#cfc0eb"}}>
                         <Text fontWeight="extrabold" fontSize="24px" > Premium PRO</Text>
                         <Heading fontWeight="extrabold" fontSize={["3xl","3xl","60px"]} >$329</Heading>
                         <Text fontWeight="medium" fontSize="18px" mt="4">billed just once</Text>
