@@ -8,7 +8,8 @@ const projects = [
   {
     name: "Project 1",
     url: "project1",
-    image: "/images/1.png" 
+    image: "/images/1.png",
+    tutorial: "https://www.chakrauiforbeginners.com/"
   }
 ]
 
@@ -23,12 +24,18 @@ const Home: NextPage = () => {
         {
           projects.map((project, key) => (
             <Box cursor="pointer" key={key} boxShadow=" 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);">
+              
               <Link href={project.url}>
                 <Box>
                   <Image src={project.image} width="500px" height="300px" alt={project.name} />
-                  <Text as="p"> {project.name} </Text>
                 </Box>
               </Link>
+
+              <a href={project.tutorial} target="_blank" >
+                 <Box m="5">
+                    <Text> Tutorial </Text>
+                 </Box>
+              </a>
             </Box>
           ))
         }
