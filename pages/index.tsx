@@ -23,7 +23,10 @@ const Home: NextPage = () => {
       <Stack direction="row" m="20">
         {
           projects.map((project, key) => (
-            <Box cursor="pointer" key={key} boxShadow=" 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);">
+            <Box cursor="pointer" key={key} 
+              borderRadius="5px" overflow="hidden"
+              boxShadow=" 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);"
+            >
               
               <Link href={project.url}>
                 <Box>
@@ -31,11 +34,11 @@ const Home: NextPage = () => {
                 </Box>
               </Link>
 
-              <a href={project.tutorial} target="_blank" >
-                 <Box m="5">
-                    <Text> Tutorial </Text>
-                 </Box>
-              </a>
+              <Box p="5" bg="gray.50" _hover={{bg:"gray.200"}}>
+                <a href={project.tutorial} target="_blank" >
+                  <Text> Tutorial </Text>
+                </a>
+              </Box>
             </Box>
           ))
         }
