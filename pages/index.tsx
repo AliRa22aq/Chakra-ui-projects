@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               </Link>
 
               <Box p="5" bg="gray.50" _hover={{bg:"gray.200"}}>
-                <a href={project.tutorial} target="_blank" >
+                <a href={project.tutorial} target="_blank" rel="noreferrer">
                   <Text> Tutorial </Text>
                 </a>
               </Box>

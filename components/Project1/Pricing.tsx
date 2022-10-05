@@ -1,6 +1,7 @@
 import React from 'react'
 import { Icon, HStack, Stack, StackProps, Box, Heading, Text, Flex, Button } from '@chakra-ui/react'
-import { CheckIcon } from '../../public/icons/Icon'
+import { Back, CheckIcon } from '../../public/icons/Icon'
+import { useRouter } from 'next/router'
 
 export const ListItem = (props: StackProps) => {
     const { children, ...rest } = props;
@@ -13,9 +14,19 @@ export const ListItem = (props: StackProps) => {
 }
 
 
+
 const Pricing = () => {
+
+    const router = useRouter();
+
+
+
     return (
         <Box mx="6">
+            <Box position="absolute" top="5" left="10">
+                <Icon as={Back} boxSize="40px" _hover={{boxSize:"50px"}} onClick={() => router.push("/")}/>
+            </Box>
+
             <Box maxWidth="994px" m="auto" mt="-140px" borderRadius="4" overflow="hidden" boxShadow="0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)">
                 <Flex direction={["column", "column", "row"]}>
                     <Box p="60px" color="#171923" bg="#f0eafb" _hover={{bg:"#cfc0eb"}}>
