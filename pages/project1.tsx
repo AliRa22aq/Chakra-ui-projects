@@ -6,11 +6,13 @@ import styles from '../styles/Home.module.css'
 import { Box, Heading, Text } from '@chakra-ui/react'
 import Pricing from '../components/Project1/Pricing'
 import Features from '../components/Project1/Features'
+import BackButton from '../components/Back'
 
 
 const Home: NextPage = () => {
   return (
     <Box textAlign="center">
+      <BackButton />
       <Header />
       <Pricing />
       <Features />

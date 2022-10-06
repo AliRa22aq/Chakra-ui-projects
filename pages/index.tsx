@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import { Box, Heading, Text, Stack} from '@chakra-ui/react'
+import { SimpleGrid, GridItem, Box, Heading, Text, Stack, useColorModeValue} from '@chakra-ui/react'
 import Link from 'next/link'
 
 
@@ -10,17 +10,28 @@ const projects = [
     url: "project1",
     image: "/images/1.png",
     tutorial: "https://www.chakrauiforbeginners.com/"
-  }
+  },
+  {
+    name: "Project 2",
+    url: "project2",
+    image: "/images/2.png",
+    tutorial: "https://egghead.io/courses/build-a-modern-user-interface-with-chakra-ui-fac68106"
+  },
+
 ]
 
 
 const Home: NextPage = () => {
+  const bgColor = useColorModeValue("gray.50", "alphaWhite.200");
+  const bgColorHover = useColorModeValue("gray.200", "red.500");
+  // const colSpan = useBreakpointValue({base: 2, md: 1});
+
   return (
-    <Box textAlign="center">
+    <Box textAlign="center" px={{base: 5, md: 10}}>
 
-      <Heading my="20" > Chakra UI Demo Projects</Heading>
+      <Heading my={{base: 10, md: 20}} > Chakra UI Portfolio </Heading>
 
-      <Stack direction="row" m="20">
+      <SimpleGrid spacing={10} columns={{base: 1, md: 3}} p={{base: 0, md: 10}}>
         {
           projects.map((project, key) => (
             <Box cursor="pointer" key={key} 
@@ -30,19 +41,19 @@ const Home: NextPage = () => {
               
               <Link href={project.url}>
                 <Box>
-                  <Image src={project.image} width="500px" height="300px" alt={project.name} />
+                  <Image src={project.image} width="600px" height="320px" alt={project.name} />
                 </Box>
               </Link>
 
-              <Box p="5" bg="gray.50" _hover={{bg:"gray.200"}}>
+              <Box p="5" bg={bgColor} _hover={{bg: bgColorHover}}>
                 <a href={project.tutorial} target="_blank" rel="noreferrer">
-                  <Text> Tutorial </Text>
+                  <Text > Tutorial </Text>
                 </a>
               </Box>
             </Box>
           ))
         }
-      </Stack>
+      </SimpleGrid>
 
       
     </Box>

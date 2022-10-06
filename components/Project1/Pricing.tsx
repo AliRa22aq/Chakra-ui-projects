@@ -1,7 +1,6 @@
 import React from 'react'
-import { Icon, HStack, Stack, StackProps, Box, Heading, Text, Flex, Button } from '@chakra-ui/react'
+import { useColorMode, Icon, HStack, Stack, StackProps, Box, Heading, Text, Flex, Button } from '@chakra-ui/react'
 import { Back, CheckIcon } from '../../public/icons/Icon'
-import { useRouter } from 'next/router'
 
 export const ListItem = (props: StackProps) => {
     const { children, ...rest } = props;
@@ -17,15 +16,12 @@ export const ListItem = (props: StackProps) => {
 
 const Pricing = () => {
 
-    const router = useRouter();
-
+    const {toggleColorMode} = useColorMode();
 
 
     return (
         <Box mx="6">
-            <Box position="absolute" top="5" left="10">
-                <Icon as={Back} boxSize="40px" _hover={{boxSize:"50px"}} onClick={() => router.push("/")}/>
-            </Box>
+
 
             <Box maxWidth="994px" m="auto" mt="-140px" borderRadius="4" overflow="hidden" boxShadow="0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)">
                 <Flex direction={["column", "column", "row"]}>
@@ -33,7 +29,7 @@ const Pricing = () => {
                         <Text fontWeight="extrabold" fontSize="24px" > Premium PRO</Text>
                         <Heading fontWeight="extrabold" fontSize={["3xl","3xl","60px"]} >$329</Heading>
                         <Text fontWeight="medium" fontSize="18px" mt="4">billed just once</Text>
-                        <Button colorScheme={"red"} size="lg" w="280px" color="gray.50" mt="8">Get Started</Button>
+                        <Button onClick={toggleColorMode} colorScheme={"red"} size="lg" w={{base: "220px", md:"280px"}} color="gray.50" mt="8"> Change Theme </Button>
                     </Box>
 
                     <Box p="60px" fontSize="18px" fontWeight="normal" color="#2D3748" bg="white">
