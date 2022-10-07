@@ -17,6 +17,12 @@ const projects = [
     image: "/images/2.png",
     tutorial: "https://egghead.io/courses/build-a-modern-user-interface-with-chakra-ui-fac68106"
   },
+  {
+    name: "Project 3",
+    url: "project3",
+    image: "/images/3.png",
+    tutorial: "https://www.figma.com/file/EWmzcVkd7qbP5Nf7iMvuqP/Trafalgar-Landing-Page?node-id=1%3A2"
+  },
 
 ]
 
@@ -24,7 +30,6 @@ const projects = [
 const Home: NextPage = () => {
   const bgColor = useColorModeValue("gray.50", "alphaWhite.200");
   const bgColorHover = useColorModeValue("gray.200", "red.500");
-  // const colSpan = useBreakpointValue({base: 2, md: 1});
 
   return (
     <Box textAlign="center" px={{base: 5, md: 10}}>
