@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, GridItem, Icon, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, GridItem, Icon, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { Consultation, DetailsIcon, EmergencyIcon, Pharpacy, SearchIcon, TrackingIcon } from '../../public/project3/icons'
 
@@ -43,7 +43,12 @@ const data = [
 
 const ServiceCard = ({ icon, title, desc }: { icon: () => JSX.Element, title: string, desc: string }) => {
     return (
-        <VStack w="350px" p="40px" h="360px"  bgColor="white" boxShadow="10px 40px 50px rgba(229, 233, 246, 0.4)" borderRadius="20px" justifyContent="flex-start">
+        <VStack
+            w="350px" p="40px" h="360px" bgColor="white"
+            boxShadow="10px 40px 50px rgba(229, 233, 246, 0.4)"
+            borderRadius="20px" justifyContent="flex-start"
+            _hover={{ boxShadow: "10px 40px 50px rgba(168, 169, 172, 0.4)" }}
+        >
             <Flex justifyContent="center" alignItems="center" h="150px"><Icon as={icon} /></Flex>
             <Text fontSize="2xl" fontWeight="bold">{title}</Text>
             <Text fontSize="16px" color="#7D7987">{desc}</Text>
@@ -57,7 +62,7 @@ const Services = () => {
             <Box position="absolute" top="980px" zIndex="-1"> <Image src="/project3/eclips.svg" /> </Box>
 
             <VStack my="100px">
-                
+
                 <VStack px="200px" py="100px" >
                     <Text fontSize="36px"> Our services </Text>
                     <Divider h="2px" bgColor="black" w="56px" borderRadius="5px" mt="24px" mb="32px" />
@@ -78,6 +83,12 @@ const Services = () => {
                         })
                     }
                 </SimpleGrid>
+
+                <Box pt="50px">
+                    <Button p="30px" w="200px" bgColor="transparent" color="#458FF6" fontSize="18px" border="1.4px solid #458FF6" borderRadius="55px"> Learn more </Button>
+                </Box>
+
+
             </VStack>
         </>
     )

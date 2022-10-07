@@ -9,6 +9,7 @@ import Features from '../components/Project1/Features'
 import BackButton from '../components/Back'
 import HeroSection from '../components/Project3/HeroSection'
 import Services from '../components/Project3/Services'
+import HeroSection2 from '../components/Project3/HeroSection2'
 
 
 const Home: NextPage = () => {
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
       <Header />
       <HeroSection />
       <Services />
+      <HeroSection2 />
     </Box>
   )
 }
