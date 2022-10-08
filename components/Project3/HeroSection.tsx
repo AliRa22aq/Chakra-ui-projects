@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <Button w="200px" py="30px" mt="45px" borderRadius="55px" bgColor="#458FF6" color="#FFFFFF" fontSize="18px"> Consult today</Button>
             </Box>
             <Box mt="84px">
-                <Image src="/project3/image3.svg" />
+                <Image src="/project3/image3.svg" alt="Image"/>
             </Box>
         </HStack>
     )

@@ -59,7 +59,7 @@ const ServiceCard = ({ icon, title, desc }: { icon: () => JSX.Element, title: st
 const Services = () => {
     return (
         <>
-            <Box position="absolute" top="980px" zIndex="-1"> <Image src="/project3/eclips.svg" /> </Box>
+            <Box position="absolute" top="980px" zIndex="-1"> <Image src="/project3/eclips.svg" alt="Image"/> </Box>
 
             <VStack my="100px">
 
@@ -74,9 +74,9 @@ const Services = () => {
 
                 <SimpleGrid w="full" columns={3} spacing="34px" px="220px" mt="80px">
                     {
-                        data.map((dt) => {
+                        data.map((dt, key) => {
                             return (
-                                <GridItem>
+                                <GridItem key={key}>
                                     <ServiceCard icon={dt.icon} title={dt.title} desc={dt.desc} />
                                 </GridItem>
                             )

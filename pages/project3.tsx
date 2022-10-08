@@ -10,6 +10,10 @@ import BackButton from '../components/Back'
 import HeroSection from '../components/Project3/HeroSection'
 import Services from '../components/Project3/Services'
 import HeroSection2 from '../components/Project3/HeroSection2'
+import HeroSection3 from '../components/Project3/HeroSection3'
+import Testiminials from '../components/Project3/Testiminials'
+import Articals from '../components/Project3/Articals'
+import Footer from '../components/Project3/Footer'
 
 
 const Home: NextPage = () => {
@@ -20,6 +24,10 @@ const Home: NextPage = () => {
       <HeroSection />
       <Services />
       <HeroSection2 />
+      <HeroSection3 />
+      <Testiminials />
+      <Articals />
+      <Footer />
     </Box>
   )
 }

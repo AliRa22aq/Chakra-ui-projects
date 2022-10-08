@@ -8,7 +8,7 @@ const BackButton = () => {
 
     return (
         <Box position="absolute" top="5" left="10">
-            <Icon as={Back} boxSize="40px" _hover={{ boxSize: "50px" }} onClick={() => router.push("/")} />
+            <Icon as={Back} boxSize="40px" _hover={{ boxSize: "50px", transition: "height 2s linear 0.5s" }} onClick={() => router.push("/")} />
         </Box>
     )
 }
