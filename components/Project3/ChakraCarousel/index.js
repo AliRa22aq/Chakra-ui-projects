@@ -7,16 +7,42 @@ import ChakraCarousel from "./ChakraCarousel";
 // Source
 // https://codesandbox.io/s/dd8vn?file=/src/theme.js:0-1359
 
+const data = [
+    {
+        title: "Review 1",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+        title: "Review 2",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+        title: "Review 3",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+        title: "Review 4",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+        title: "Review 5",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+        title: "Review 6",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+        title: "Review 7",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    }
+
+
+
+
+]
+
 export const Carousel = () => {
-
-    const [data, setData] = useState([]);
-    console.log("data: ", data);
-
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/posts/")
-            .then((res) => res.json())
-            .then((res) => setData(res));
-    }, []);
 
     return (
         <Container
@@ -32,7 +58,7 @@ export const Carousel = () => {
             }}
         >
             <ChakraCarousel gap={32}>
-                {data.slice(5, 15).map((post, index) => (
+                {data.map((post, index) => (
                     <Flex
                         key={index}
                         boxShadow="rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
@@ -48,7 +74,7 @@ export const Carousel = () => {
                         <VStack >
                             <Heading
                                 fontSize={{ base: "xl", md: "2xl" }}
-                                textAlign="left"
+                                textAlign="center"
                                 w="full"
                                 mb={2}
                             >
@@ -57,10 +83,10 @@ export const Carousel = () => {
                             <Text w="full">{capsFirst(post.body)}</Text>
                         </VStack>
                         
-                        <Box w="full">
+                        <Box w="full" pt="20px">
                             <Avatar boxSize="120px" />
                         </Box>
-
+                        
                     </Flex>
                 ))}
             </ChakraCarousel>

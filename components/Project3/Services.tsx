@@ -50,7 +50,7 @@ const ServiceCard = ({ icon, title, desc }: { icon: () => JSX.Element, title: st
             _hover={{ boxShadow: "10px 40px 50px rgba(168, 169, 172, 0.4)" }}
         >
             <Flex justifyContent="center" alignItems="center" h="150px"><Icon as={icon} /></Flex>
-            <Text fontSize="2xl" fontWeight="bold">{title}</Text>
+            <Text fontSize="2xl" color="black" fontWeight="bold">{title}</Text>
             <Text fontSize="16px" color="#7D7987">{desc}</Text>
         </VStack>
     )
