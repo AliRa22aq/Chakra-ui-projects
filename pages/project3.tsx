@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Project3/Header'
 import styles from '../styles/Home.module.css'
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box, Hide } from '@chakra-ui/react'
 import Pricing from '../components/Project1/Pricing'
 import Features from '../components/Project1/Features'
 import BackButton from '../components/Back'
@@ -19,13 +19,15 @@ import Footer from '../components/Project3/Footer'
 const Home: NextPage = () => {
   return (
     <Box textAlign="center">
-      <BackButton />
+      {/* <BackButton /> */}
       <Header />
       <HeroSection />
       <Services />
       <HeroSection2 />
       <HeroSection3 />
-      <Testiminials />
+      <Hide below="md">
+        <Testiminials />
+      </Hide>
       <Articals />
       <Footer />
     </Box>

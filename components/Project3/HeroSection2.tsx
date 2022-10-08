@@ -1,13 +1,21 @@
-import { Box, Button, Divider, HStack, Image, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Divider, Stack, Image, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 const HeroSection2 = () => {
   return (
-    <HStack my="150px" mx="150px" >
+     
+    <Stack  
+      direction={{base:"column", md: "row"}} 
+      m={{base: "20px", md: "150px"}} 
+      >
 
       <Image src="/project3/image2.svg" alt="Image" w="650px" h="480px" />
 
-      <VStack px="100px" textAlign="left" justifyContent="flex-start">
+      <VStack 
+        p={{base: "30px 10px", md: "100px"}} 
+        textAlign={{base:"center", md: "left"}} 
+        justifyContent="flex-start"
+        >
         <Text w="full"  lineHeight="40px" fontSize="3xl" fontWeight="bold">Leading healthcare providers</Text>
         <Divider borderColor="black" w="full" borderRadius="5px" />
         <Text fontSize="18px" fontWeight="300px" color="#7D7987"> Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver</Text>
@@ -16,7 +24,7 @@ const HeroSection2 = () => {
         </Box>
       </VStack>
 
-    </HStack>
+    </Stack>
   )
 }
 

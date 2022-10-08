@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Flex, GridItem, Icon, Image, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, GridItem, Icon, Image, SimpleGrid, Text, VStack, Hide } from '@chakra-ui/react'
 import React from 'react'
 import { Consultation, DetailsIcon, EmergencyIcon, Pharpacy, SearchIcon, TrackingIcon } from '../../public/project3/icons'
 
@@ -44,7 +44,7 @@ const data = [
 const ServiceCard = ({ icon, title, desc }: { icon: () => JSX.Element, title: string, desc: string }) => {
     return (
         <VStack
-            w="350px" p="40px" h="360px" bgColor="white"
+            w="350px" h="320px" p="20px"  bgColor="white"
             boxShadow="10px 40px 50px rgba(229, 233, 246, 0.4)"
             borderRadius="20px" justifyContent="flex-start"
             _hover={{ boxShadow: "10px 40px 50px rgba(168, 169, 172, 0.4)" }}
@@ -59,26 +59,37 @@ const ServiceCard = ({ icon, title, desc }: { icon: () => JSX.Element, title: st
 const Services = () => {
     return (
         <>
-            <Box position="absolute" top="980px" zIndex="-1"> <Image src="/project3/eclips.svg" alt="Image"/> </Box>
 
-            <VStack my="100px">
+            <Hide below="md">
+                <Box position="absolute" top="980px" zIndex="-1"> <Image src="/project3/eclips.svg" alt="Image" /> </Box>
+            </Hide>
 
-                <VStack px="200px" py="100px" >
+            <VStack m={{base: "0px", md: "0px"}}>
+
+                <VStack p={{base: "20px 40px", md: "100px 200px"}} >
                     <Text fontSize="36px"> Our services </Text>
-                    <Divider h="2px" bgColor="black" w="56px" borderRadius="5px" mt="24px" mb="32px" />
+                    <Divider borderColor="black" w="full" borderRadius="5px" />
+                    
                     <Box mx="320px" mt="800px">
                         <Text color="#7D7987"  >We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</Text>
                     </Box>
                 </VStack>
 
 
-                <SimpleGrid w="full" columns={3} spacing="34px" px="220px" mt="80px">
+                <SimpleGrid 
+                    w="full" 
+                    columns={{base: 1, md: 3}} 
+                    spacing="34px" 
+                    p={{base: "auto", md: "0px 220px"}} 
+                    >
                     {
                         data.map((dt, key) => {
                             return (
-                                <GridItem key={key}>
-                                    <ServiceCard icon={dt.icon} title={dt.title} desc={dt.desc} />
-                                </GridItem>
+                                <Flex justifyContent="center" key={key}>
+                                    <GridItem  >
+                                        <ServiceCard icon={dt.icon} title={dt.title} desc={dt.desc} />
+                                    </GridItem>
+                                </Flex>
                             )
                         })
                     }

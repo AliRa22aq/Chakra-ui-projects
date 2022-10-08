@@ -207,7 +207,7 @@ import React, {
             value={percentage(activeItem, positions.length - constraint)}
             alignSelf="center"
             borderRadius="2px"
-            bg="#458FF6"
+            // bg="#458FF6"
             flex={1}
             h="3px"
             sx={{"> div": { backgroundColor: "#458FF6" }}}

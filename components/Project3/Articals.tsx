@@ -1,5 +1,4 @@
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
-import { Box, Button, Divider, Flex, GridItem, Icon, Image, SimpleGrid, Text, VStack, HStack } from '@chakra-ui/react'
+import { Box, Button, Divider, Hide, Flex, GridItem, Icon, Image, SimpleGrid, Text, VStack, HStack } from '@chakra-ui/react'
 import { Arrow } from '../../public/project3/icons';
 
 const data = [
@@ -23,7 +22,9 @@ const data = [
 const ArticalCard = ({ image, title, desc }: { image: string, title: string, desc: string }) => {
   return (
     <VStack
-      w="350px" h="512px" bgColor="white"
+      w={{base: "300px", md: "350px"}} 
+      h={{base: "500px", md: "512px"}} 
+      bgColor="white"
       boxShadow="10px 40px 50px rgba(229, 233, 246, 0.4)"
       borderRadius="20px" overflow="hidden" justifyContent="flex-start"
       _hover={{ boxShadow: "10px 40px 50px rgba(168, 169, 172, 0.4)" }}
@@ -50,27 +51,40 @@ const Articals = () => {
 
   return (
     <>
-      <Box position="absolute" top="4170px" left="1057px" zIndex="-1"> <Image src="/project3/eclips2.svg" alt="Image"/> </Box>
-      <Box position="absolute" top="4200" left="170px" zIndex="-1"> <Image src="/project3/icon2.svg" alt="Image"/> </Box>
+    <Hide below="md">
+        <Box position="absolute" top="4170px" left="1057px" zIndex="-1"> <Image src="/project3/eclips2.svg" alt="Image"/> </Box>
+        <Box position="absolute" top="4200" left="170px" zIndex="-1"> <Image src="/project3/icon2.svg" alt="Image"/> </Box>
+    </Hide>
 
-      <VStack my="100px">
+      <VStack 
+        m={{base: "20px", md: "40px 0px"}}
+        >
 
-        <VStack px="200px" py="100px" >
+        <VStack p={{base:"20px 20px", md: "100px 200px"}} >
           <Text fontSize="36px"> Check out our latest article </Text>
-          <Divider h="2px" bgColor="black" w="56px" borderRadius="5px" mt="24px" mb="32px" />
+          <Divider borderColor="black" w="full" borderRadius="5px" />
+          
           <Box mx="320px" mt="800px">
             <Text color="#7D7987"  >We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</Text>
           </Box>
         </VStack>
 
 
-        <SimpleGrid w="full" columns={3} spacing="34px" px="220px" mt="80px">
+        <SimpleGrid 
+          w="full" 
+          columns={{base: 1, md: 3}} 
+          spacing={{base: "15px", md: "34px"}}  
+          px={{base: "0px", md: "220px"}} 
+          mt="80px"
+          >
           {
             data.map((dt, key) => {
               return (
-                <GridItem key={key}>
-                  <ArticalCard image={dt.image} title={dt.title} desc={dt.desc} />
-                </GridItem>
+                <Flex justifyContent="center" key={key}>
+                  <GridItem>
+                    <ArticalCard image={dt.image} title={dt.title} desc={dt.desc} />
+                  </GridItem>
+                </Flex>
               )
             })
           }
