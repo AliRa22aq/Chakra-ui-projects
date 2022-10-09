@@ -11,24 +11,25 @@ const WorkingSlide = (props: any) => {
     const { title, description, slide, tools } = props;
 
     return (
-        <HStack  spacing="56px" >
+        <HStack  spacing="56px" id="works">
             <VStack alignItems="start" spacing="60px" >
                 <Image src="/project4/wokrsPic.svg" alt="image"/>
+                <a href='#getintouch'>
+                    <Flex alignItems="center" cursor="pointer">
+                        <Icon as={Scroll} />
+                        <Text
+                            ml="20px"
+                            fontWeight={500}
+                            fontSize="large"
+                            lineHeight="13px"
+                            fontStyle="Spartan"
+                            color="project4.gray"
+                        >
+                            Scroll
+                        </Text>
+                    </Flex>
+                </a>
 
-                <Flex alignItems="center">
-                    <Icon as={Scroll} />
-                    <Text
-                        ml="20px"
-                        fontWeight={500}
-                        fontSize="large"
-                        lineHeight="13px"
-                        fontStyle="Spartan"
-                        color="project4.gray"
-
-                    >
-                        Scroll
-                    </Text>
-                </Flex>
             </VStack>
 
             <VStack alignItems="flex-start" spacing="32px" m="500px" w="620px" pb="100px">

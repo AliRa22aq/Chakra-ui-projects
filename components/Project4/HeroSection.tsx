@@ -36,21 +36,21 @@ const HeroSection = () => {
             </HStack>
         </VStack>
 
-        <Flex alignItems="center"> 
-            <Icon as={Scroll} /> 
-            <Text 
-                as="span"
-                ml="20px"
-                fontWeight={500} 
-                fontSize="large" 
-                lineHeight="13px" 
-                fontStyle="Spartan"
-                color="project4.gray"
-
-                >  
-                    Scroll 
-                </Text>
-        </Flex>
+          <a href='#aboutme'>
+              <Flex alignItems="center" cursor="pointer" >
+                  <Icon as={Scroll} />
+                  <Text
+                      ml="20px"
+                      fontWeight={500}
+                      fontSize="large"
+                      lineHeight="13px"
+                      fontStyle="Spartan"
+                      color="project4.gray"
+                  >
+                      Scroll
+                  </Text>
+              </Flex>
+          </a>
 
 
     </VStack>

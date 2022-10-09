@@ -29,7 +29,7 @@ const AboutMe = () => {
 
     return (
         <>
-            <HStack m="200px 120px" spacing="56px" >
+            <HStack m="200px 120px" spacing="56px" id="skills">
 
                 <VStack alignItems="start" spacing="32px" w="620px">
                     <Text
@@ -73,22 +73,22 @@ const AboutMe = () => {
                         }
                     </HStack>
 
-
-                    <Flex alignItems="center" pt="80px">
-                        <Icon as={Scroll} />
-                        <Text
-                            as="span"
-                            ml="20px"
-                            fontWeight={500}
-                            fontSize="large"
-                            lineHeight="13px"
-                            fontStyle="Spartan"
-                            color="project4.gray"
-                        >
-                            Scroll
-                        </Text>
-                    </Flex>
-
+                    <a href='#works'> 
+                        <Flex alignItems="center" pt="80px" cursor="pointer">
+                            <Icon as={Scroll} />
+                            <Text
+                                as="span"
+                                ml="20px"
+                                fontWeight={500}
+                                fontSize="large"
+                                lineHeight="13px"
+                                fontStyle="Spartan"
+                                color="project4.gray"
+                            >
+                                Scroll
+                            </Text>
+                        </Flex>
+                    </a>
 
                 </VStack>
 

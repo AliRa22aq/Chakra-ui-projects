@@ -9,25 +9,29 @@ const AboutMe = () => {
                 <Image src="/project4/splash2.svg" alt="image"/>
             </Box>
 
-            <HStack m="250px 120px" spacing="56px">
+            <HStack m="250px 120px" spacing="56px" id="aboutme">
                 <VStack alignItems="start" spacing="60px" >
                     <Image src="/project4/profilepic.svg" alt="image"/>
-                    <Flex alignItems="center">
-                        <Icon as={Scroll} />
-                        <Text
+        
+                    <a href='#skills'>
+                        <Flex alignItems="center" cursor="pointer">
+                            <Icon as={Scroll} />
+                            <Text
 
-                            as="span"
-                            ml="20px"
-                            fontWeight={500}
-                            fontSize="large"
-                            lineHeight="13px"
-                            fontStyle="Spartan"
-                            color="project4.gray"
+                                as="span"
+                                ml="20px"
+                                fontWeight={500}
+                                fontSize="large"
+                                lineHeight="13px"
+                                fontStyle="Spartan"
+                                color="project4.gray"
 
-                        >
-                            Scroll
-                        </Text>
-                    </Flex>
+
+                            >
+                                Scroll
+                            </Text>
+                        </Flex>
+                    </a>
                 </VStack>
 
                 <VStack alignContent="flex-start" spacing="32px" m="500px" w="620px">
