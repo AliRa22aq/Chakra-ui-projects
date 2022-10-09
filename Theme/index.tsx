@@ -29,12 +29,20 @@ export const theme = extendTheme({
             // d200: "#2C5282",
             // d400: "#2A4365",
             // d700: "#14315b"
+        },
+        project4 : {
+            dark: "#000C24",
+            light: "#FBFBFB",
+            red: "#F44336",
+            gray: "#928A97"
         }
 
     },
     fonts: {
         heading: `Montserrat, ${base.fonts.heading}`,
-        body: `Inter, ${base.fonts.body}`
+        body: `Inter, ${base.fonts.body}`,
+        
+
     }
 });
 

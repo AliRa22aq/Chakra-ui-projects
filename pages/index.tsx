@@ -23,6 +23,12 @@ const projects = [
     image: "/images/3.png",
     tutorial: "https://www.figma.com/file/EWmzcVkd7qbP5Nf7iMvuqP/Trafalgar-Landing-Page?node-id=1%3A2"
   },
+  {
+    name: "Project 4",
+    url: "project4",
+    image: "/images/4.png",
+    tutorial: "https://www.figma.com/file/ndy5zafHSrwrTMz0vE3Sba/Developer-Portfolio-(Community)?node-id=50%3A832"
+  },
 
 ]
 
