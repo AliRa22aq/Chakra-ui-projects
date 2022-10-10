@@ -40,7 +40,7 @@ const Home: NextPage = () => {
   return (
     <Box textAlign="center" px={{base: 5, md: 10}}>
 
-      <Heading my={{base: 10, md: 20}} > Chakra UI Portfolio </Heading>
+      <Heading my={{base: 10, md: 20}} > Next JS + Chakra UI + Web 3.0 Portfolio </Heading>
 
       <SimpleGrid spacing={10} columns={{base: 1, md: 3}} p={{base: 0, md: 10}}>
         {
