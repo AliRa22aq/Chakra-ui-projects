@@ -1,7 +1,7 @@
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 import { Box, Flex, HStack, Icon, Image, Tag, Text, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { GitHub, ProgressLine, Scroll } from '../../public/project4/icons'
+import { GitHub, GitHubBlack, ProgressLine, Scroll } from '../../public/project4/icons'
 
 
 
@@ -63,7 +63,7 @@ const WorkingSlide = (props: any) => {
                 </Text>
 
                 <Box>
-                    <Icon as={GitHub} />
+                    <Icon as={GitHubBlack}  />
                 </Box>
 
                 <HStack spacing="16px">
@@ -75,7 +75,7 @@ const WorkingSlide = (props: any) => {
                                 fontSize="12px"
                                 fontStyle="Spartan"
                                 color="project4.light"
-                                bgColor="project4.gray"
+                                bgColor="project4.dark"
                             >
                                 {tool}
                             </Tag>
