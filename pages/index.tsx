@@ -1,7 +1,17 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Image from 'next/image'
 import { SimpleGrid, GridItem, Box, Heading, Text, Stack, useColorModeValue} from '@chakra-ui/react'
 import Link from 'next/link'
+
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      data: ""
+    }
+  }
+}
+
 
 
 const projects = [
@@ -36,6 +46,7 @@ const projects = [
 const Home: NextPage = () => {
   const bgColor = useColorModeValue("gray.50", "alphaWhite.200");
   const bgColorHover = useColorModeValue("gray.200", "red.500");
+
 
   return (
     <Box textAlign="center" px={{base: 5, md: 10}}>

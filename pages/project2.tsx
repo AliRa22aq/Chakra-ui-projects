@@ -1,8 +1,17 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import { Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import BackButton from '../components/Back'
 import LeftSection from '../components/Project2/LeftSection'
 import RightSection from '../components/Project2/RightSection'
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  return {
+    props: {
+      data: ""
+    }
+  }
+}
+
 
 const Home: NextPage = () => {
   return (
