@@ -39,6 +39,13 @@ const projects = [
     image: "/images/4.png",
     tutorial: "https://www.figma.com/file/ndy5zafHSrwrTMz0vE3Sba/Developer-Portfolio-(Community)?node-id=50%3A832"
   },
+  {
+    name: "Project 5",
+    url: "project5",
+    image: "/images/4.png",
+    tutorial: "https://www.figma.com/file/ndy5zafHSrwrTMz0vE3Sba/Developer-Portfolio-(Community)?node-id=50%3A832"
+  },
+
 
 ]
 

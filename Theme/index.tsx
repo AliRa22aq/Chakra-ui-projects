@@ -2,6 +2,9 @@ import { extendTheme, theme as base } from "@chakra-ui/react";
 
 export const theme = extendTheme({
     colors: {
+        insta : {
+       
+        },
         brand: {
             50: '#f5fee5',
             100: '#e1fbb2',
