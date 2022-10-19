@@ -1,7 +1,7 @@
 import { DownloadIcon, SearchIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import { Box, Flex, Hide, HStack, Icon, Image, Input, InputGroup, InputLeftElement, InputRightElement, Text, VStack } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { HomeIcon, MessangerIcon, ProfileIcon } from '../../public/project5/icons';
+import { DiscoverIcon, HeartIcon, HomeIcon, MessangerIcon, PlusIcon, ProfileIcon } from '../../public/project5/icons';
 
 const Header = () => {
 
@@ -12,101 +12,100 @@ const Header = () => {
         setInputValue(text);
     }
 
-    // &#xF002; 
-    // gray.100
-
     return (
         <Box
             border="1px solid red"
-            borderColor="#EFEFEF"
-            py="10px"
+            borderColor="#D9D9D9"
+            bgColor="project5.white"
         >
 
-        <HStack
-            px={{ base: "5px", md:"10px" }}
-            justifyContent="space-between"
-            alignItems="center"
-            border="0px solid red"
-            w={{ base: "100%", md:"100%", lg:"60%"}}
-            mx={{base: "auto", md:"auto"}}
-        >
+            <HStack
+                px={{ base: "5px", md: "10px" }}
+                justifyContent="space-between"
+                alignItems="center"
+                border="0px solid red"
+                w={{ base: "100%", md: "100%", lg: "60%" }}
+                mx={{ base: "auto", md: "auto" }}
+                py="12px"
 
-            <HStack  border="0px solid red">
-                <Image src="/project5/instagramLogo.svg" alt="logo" h="30px" />
-                <Box pb="10px">
-                    <Image w="12px" src="/project5/expand.png" />
-                </Box>
-            </HStack>
+            >
 
-
-            <Hide below="md">
                 <HStack border="0px solid red">
-                    <Box w="325px" >
-                        <InputGroup color="#8E8E8E" w="260px">
-
-                            {
-                                !isInputActive && (
-                                    <InputLeftElement color="gray.300" fontSize="1.2em" children={<Icon as={SearchIcon} />} />
-                                )
-                            }
-
-                            <Input
-                                h="35px"
-                                fontWeight={!inputvalue ? "light" : "normal"}
-                                color={!inputvalue ? "#8E8E8E" : "black"}
-                                // fontWeight="light"
-                                bgColor="#EFEFEF"
-                                // _focus={{ color: "black", fontWeight:"bold" }}
-                                placeholder="Search"
-                                onChange={(e) => handleInput(e.target.value)}
-                                onFocus={(e) => {
-                                    console.log(e);
-                                    setIsInputActive(true)
-                                }}
-                                onBlur={(e) => {
-                                    console.log(e);
-                                    if (!inputvalue) {
-                                        setIsInputActive(false)
-                                    }
-                                }}
-                            />
-
-                            {
-                                isInputActive && (
-                                    <InputRightElement children={<Icon as={SmallCloseIcon} />} onClick={() => handleInput("Hello")} />
-                                )
-                            }
-
-                        </InputGroup>
+                    <Image src="/project5/instaLogo.svg" alt="logo" />
+                    <Box pb="10px">
+                        <Image w="12px" src="/project5/expand.png" alt="expand" />
                     </Box>
-                    <HStack spacing={5} alignItems="center" border="0px solid red">
-                        <Icon as={HomeIcon} />
-                        <Icon as={MessangerIcon} />
-                        <Flex alignItems="center" boxSize="24px">
-                            <Image src="/project5/plus.png" />
-                        </Flex>
-                        <Flex alignItems="center" boxSize="24px">
-                            <Image src="/project5/adventures.png" />
-                        </Flex>
-                        <Flex alignItems="center" boxSize="36px" w="24px">
-                            <Image src="/project5/heart.png" />
-                        </Flex>
-                        <Flex alignItems="center">
-                            <Image src="/project5/profile.png" w="30px" />
-                        </Flex>
-                    </HStack>
                 </HStack>
-            </Hide>
-        
-            
-            <Hide above='sm'>
-                <Flex alignItems="center" boxSize="36px" w="24px">
-                    <Image src="/project5/heart.png" />
-                </Flex>
-            </Hide>
 
 
-        </HStack>
+                <Hide below="md">
+                    <HStack border="0px solid red">
+                        <Box w="325px" >
+                            <InputGroup color="#8E8E8E" w="260px">
+
+                                {
+                                    !isInputActive && (
+                                        <InputLeftElement color="gray.300" fontSize="1.2em">
+                                            <Icon as={SearchIcon} />
+                                        </InputLeftElement>
+                                    )
+                                }
+
+                                <Input
+                                    h="35px"
+                                    fontWeight={!inputvalue ? "light" : "normal"}
+                                    color={!inputvalue ? "#8E8E8E" : "black"}
+                                    bgColor="#EFEFEF"
+                                    placeholder="Search"
+                                    onChange={(e) => handleInput(e.target.value)}
+                                    onFocus={(e) => {
+                                        console.log(e);
+                                        setIsInputActive(true)
+                                    }}
+                                    onBlur={(e) => {
+                                        console.log(e);
+                                        if (!inputvalue) {
+                                            setIsInputActive(false)
+                                        }
+                                    }}
+                                />
+
+                                {
+                                    isInputActive && (
+                                        <InputRightElement onClick={() => handleInput("Hello")} >
+                                            <Icon as={SmallCloseIcon} />
+                                        </InputRightElement>
+                                    )
+                                }
+
+                            </InputGroup>
+                        </Box>
+                        <HStack spacing={5} alignItems="center" border="0px solid red">
+                            <Icon as={HomeIcon} />
+                            <Icon as={MessangerIcon} />
+                            <Icon as={PlusIcon} />
+                            <Icon as={DiscoverIcon} />
+                            <Icon as={HeartIcon} />
+                            <Box
+                                border="1px solid gray"
+                                w="26px"
+                                h="26px"
+                                borderRadius={25}
+                                backgroundImage={`url("/project5/profilePic.png")`}
+                                backgroundSize="cover"
+                                backgroundRepeat="no-repeat"
+                            />
+                        </HStack>
+                    </HStack>
+                </Hide>
+
+
+                <Hide above='sm'>
+                    <Icon as={HeartIcon} />
+                </Hide>
+
+
+            </HStack>
 
         </Box>
 

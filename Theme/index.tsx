@@ -2,8 +2,13 @@ import { extendTheme, theme as base } from "@chakra-ui/react";
 
 export const theme = extendTheme({
     colors: {
-        insta : {
-       
+        project5 : {
+            black: "#262626",
+            blue: "#0095F6",
+            white: "#FFFFFF",
+            darkWhite: "#FAFAFA",
+            borderColor: "#DBDBDB",
+            gray: "@8E8E8E"
         },
         brand: {
             50: '#f5fee5',
@@ -18,20 +23,7 @@ export const theme = extendTheme({
             900: '#203300',
         },
         base: {
-            // 50: '#EBF8FF',
-            // 100: '#BEE3F8',
-            // 200: '#90CDF4',
-            // 300: '#63B3ED',
-            // 400: '#4299E1',
-            // 500: '#3182CE',
-            // 600: '#2B6CB0',
-            // 700: '#2C5282',
-            // 800: '#2A4365',
-            // 900: '#14315b',
             d100: "#3479c3",
-            // d200: "#2C5282",
-            // d400: "#2A4365",
-            // d700: "#14315b"
         },
         project4 : {
             dark: "#000C24",
