@@ -8,7 +8,7 @@ export const theme = extendTheme({
             white: "#FFFFFF",
             darkWhite: "#FAFAFA",
             borderColor: "#DBDBDB",
-            gray: "@8E8E8E"
+            gray: "#8E8E8E"
         },
         brand: {
             50: '#f5fee5',

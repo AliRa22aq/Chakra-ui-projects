@@ -42,7 +42,7 @@ const projects = [
   {
     name: "Project 5",
     url: "project5",
-    image: "/images/4.png",
+    image: "/images/5.png",
     tutorial: "https://www.figma.com/file/ddzp2xhE1C733RYzPS9JzH/Instagram-UI-Clone-(Community)?node-id=0%3A1"
   },
 
